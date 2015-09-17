@@ -5,7 +5,7 @@ var TodoTextInput = require('./TodoTextInput.react');
 var TodoItem = React.createClass({
 
     propTypes: {
-        todo: React.propTypes.object.isRequired
+        todo: React.PropTypes.object.isRequired
     },
 
     render: function () {
@@ -17,7 +17,7 @@ var TodoItem = React.createClass({
                 <label>
                     {todo.text}
                 </label>
-                <button classname="destory" onclick=(this._onDestroyClick) />
+                <button className="destory" onClick={this._onDestroyClick} />
             </li>
         );
     },

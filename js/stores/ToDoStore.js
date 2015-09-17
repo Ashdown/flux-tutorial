@@ -35,7 +35,7 @@ var TodoStore = assign({}, EventEmitter.prototype, {
      * return {object}
      */
     getAll: function() {
-        this.emit(CHANGE_EVENT);
+        return _todos;
     },
 
     emitChange: function() {
@@ -62,7 +62,7 @@ var TodoStore = assign({}, EventEmitter.prototype, {
 
         switch(action.actionType) {
             case TodoConstants.TODO_CREATE:
-                text = acton.text.trim();
+                text = action.text.trim();
                 if (text !== '') {
                     create(text);
                     TodoStore.emitChange()

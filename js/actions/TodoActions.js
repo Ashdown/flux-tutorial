@@ -14,6 +14,6 @@ var TodoActions = {
             id: id
         });
     }
-}
+};
 
 module.exports = TodoActions;

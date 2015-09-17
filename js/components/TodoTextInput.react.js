@@ -34,10 +34,8 @@ var TodoTextInput = React.createClass({
     },
 
     _save: function(){
-        this.props.onSave(this.sate.value);
-        this.setState({
-            value: ''
-        });
+        this.props.onSave(this.state.value);
+        this.setState({value: ''});
     },
 
     _onChange: function(event){
@@ -47,10 +45,10 @@ var TodoTextInput = React.createClass({
     },
 
     _onKeyDown: function(event) {
-        if (event.keyCode == ENTER_KEY_CODE) {
+        if (event.keyCode === ENTER_KEY_CODE) {
             this._save();
         }
     }
 });
 
-module.exports('TodoTextInput');
+module.exports = TodoTextInput;

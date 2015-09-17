@@ -8,4 +8,4 @@ var Footer = React.createClass({
     }
 });
 
-module.export = Footer;
+module.exports = Footer;

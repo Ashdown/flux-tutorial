@@ -4,7 +4,8 @@ var MainSection = require('./MainSection.react');
 var React = require('react');
 var TodoStore = require('../stores/TodoStore');
 
-function getToDoState() {
+function getTodoState() {
+
     return {
         allTodos: TodoStore.getAll()
     };
@@ -12,7 +13,7 @@ function getToDoState() {
 
 var TodoApp = React.createClass({
     getInitialState: function(){
-        return getToDoState();
+        return getTodoState();
     },
 
     componentDidMount: function(){
